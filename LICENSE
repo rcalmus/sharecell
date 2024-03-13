@@ -54,5 +54,8 @@ ________________________________________________________________________________
 
 Excel_utils.m
 Author: "Image Analyst", https://www.mathworks.com/matlabcentral/profile/authors/1343420
+from https://www.mathworks.com/matlabcentral/answers/585908-excel-formatting-using-matlab
 
-see https://www.mathworks.com/matlabcentral/answers/585908-excel-formatting-using-matlab
+ExcelCol.m
+from http://www.mathworks.com/matlabcentral/fileexchange/27182-excel-column-conversion
+% http://www.mathworks.com/matlabcentral/fileexchange/27182-excel-column-conversion
