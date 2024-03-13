@@ -1,8 +1,5 @@
-(c) Dr Ryan Calmus, University of Iowa, 2023
-
-## Author: Ryan Calmus, PhD
-## Name: rawDataToExcel
-
+## rawDataToExcel
+### Author: Ryan Calmus, PhD
 # Description:
 Takes a struct, rawData, organized hierarchically in the form of a manuscript, and generates a set of
 Excel files encompassing the data from every panel of every figure of every section of the paper. Each
@@ -23,3 +20,7 @@ Copy the entire file hierarchy to the installation path of choice and add it to 
 > rawDataToExcel(dataStruct)
 
 to generate the shareable Excel files.
+
+See License file for further details.
+
+© Dr Ryan Calmus, University of Iowa, 2023
