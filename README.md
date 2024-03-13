@@ -1,7 +1,7 @@
 (c) Dr Ryan Calmus, University of Iowa, 2023
 
-Author: Ryan Calmus, PhD
-Name: rawDataToExcel
+## Author: Ryan Calmus, PhD
+## Name: rawDataToExcel
 
 # Description:
 Takes a struct, rawData, organized hierarchically in the form of a manuscript, and generates a set of
