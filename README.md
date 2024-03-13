@@ -10,9 +10,9 @@ titled according to the name of the field. Individual row and column headings wi
 MATLAB table containing the data to export. Additional labels spanning the entire set of columns and
 rows can optionally be specified. rawData should be organized as follows (where square brackets denote
 optional fields):
-   rawData.paperSection.figureName.tables(1:n).table = <MATLAB table of data>
-   [rawData.paperSection.figureName.tables(1:n).colLabelHorizontal = <char label for columns of table>]
-   [rawData.paperSection.figureName.tables(1:n).rowLabelVertical = <char label for rows of table>]
+>   rawData.paperSection.figureName.tables(1:n).table = _MATLAB table of data_
+>   [rawData.paperSection.figureName.tables(1:n).colLabelHorizontal = _char label for columns of table_]
+>   [rawData.paperSection.figureName.tables(1:n).rowLabelVertical = _char label for rows of table_]
 
 # Installation:
 Copy the entire file hierarchy to the installation path of choice and add it to your MATLAB path. Call:
