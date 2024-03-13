@@ -1,5 +1,9 @@
 % (c) Dr Ryan Calmus, University of Iowa, 2023
 
+% Author: Ryan Calmus, PhD
+% Name: rawDataToExcel
+
+% Description:
 % Takes a struct, rawData, organized hierarchically in the form of a manuscript, and generates a set of
 % Excel files encompassing the data from every panel of every figure of every section of the paper. Each
 % section will result in a separate Excel file, and each figure will result in its own Excel worksheet
