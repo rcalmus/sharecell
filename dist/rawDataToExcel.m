@@ -38,13 +38,6 @@ function excelFileName = dataToExcel(paperSection,data)
     excelFileName = fullfile('.',[paperSection,'_data.xlsx']);
     excelFileNameAbs = fullfile(cd,[paperSection,'_data.xlsx']);
     
-    %     excelVersion = str2double(Excel.Version);
-    % 	if excelVersion < 12
-    % 		excelExtension = '.xls';
-    % 	else
-    % 		excelExtension = '.xlsx';
-    % 	end
-    
     figureNames = sort(fieldnames(data));
     try
         sheetNames = cellfun(@(x) strrep([upper(x(1)),lower(x(2:end))],'_',' '),figureNames,'UniformOutput',false);
@@ -127,10 +120,9 @@ function excelFileName = dataToExcel(paperSection,data)
                 end
                 endCellCol = char(ExcelCol(1 + extraCol + size(curTable,2)));
     
-                %                 xlswrite(excelFileName,tableToWrite,figureNames{iFigure},startCell);
                 Excel.ActiveWorkbook.Save;
                 Excel.ActiveWorkbook.Close;
-                %                 invoke(Excel.Workbooks, 'Close');
+
                 writetable(curTable,excelFileName,'Sheet',sheetNames{iFigure},'Range',startCell,'WriteRowNames',true);
                 invoke(Excel.Workbooks, 'Open', excelFileNameAbs);
                 endCell = [endCellCol,num2str(curOffset)];
@@ -171,18 +163,7 @@ function excelFileName = dataToExcel(paperSection,data)
                 curOffset = curOffset + 2;%length(curFieldPath) +1;
             end
         end
-        %         xlswrite(excelFileName,{''},1,'A1'); %move to first cell
-    
-        %          [tableData,pathToChild] = getNestedTableData(data.(figureNames{iFigure}),{});
-        %          a = tableData
-        %         for iTable = 1:length(tableData)
-        % %            join(cellflat(pathToChild{iTable}),'.')
-        %            tableName = tableData{iTable}
-        %         end
-        %         tableNames = fieldnames(data.(figureNames{iFigure}).tables);
-        %         for iTable = 1:length(tableNames)
-        %             xlswrite(excelFileName,table2cell(data.(figureNames{iFigure}).tables.(tableNames{iTable}).table),figureNames{iFigure});
-        %         end
+
         Excel_utils.AutoSizeColumns(Excel);
         Excel_utils.AlignCells(Excel, '$A:$A', 4, false);
     end
@@ -294,3 +275,4 @@ function FoundFieldsList = Really_StructFind(search_struct,search_field)
         end
     end
 end
+
