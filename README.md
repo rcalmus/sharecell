@@ -1,19 +1,14 @@
-## rawDataToExcel
+## sharecell
 ### Author: Ryan Calmus, PhD
 # Description:
-Takes a struct, rawData, organized hierarchically in the form of a manuscript, and generates a set of
-Excel files encompassing the data from every panel of every figure of every section of the paper. Each
-section will result in a separate Excel file, and each figure will result in its own Excel worksheet
-(tab). Each figure may contain multiple tables, e.g. for multiple panels or to describe multiple
-features of a single plot. Each table will be written to a separate table within the given worksheet,
-titled according to the name of the field. Individual row and column headings will be drawn from the
-MATLAB table containing the data to export. Additional labels spanning the entire set of columns and
-rows can optionally be specified. rawData should be organized as follows (where square brackets denote
-optional fields):
+**sharecell** is a tool to facilitate the rapid generation of exhaustive tabulations of data contained within manuscript results figures, as commonly required nowadays by scientific journals.
+
+This primarily consists of one function: _rawDataToExcel.m_, which takes a struct, rawData, organized hierarchically in the form of a manuscript, and generates a set of Excel files encompassing the data from every panel of every figure of every section of the paper. Each section will result in a separate Excel file, and each figure will result in its own Excel worksheet (tab). Each figure may contain multiple tables, e.g. for multiple panels or to describe multiple features of a single plot. Each table will be written to a separate table within the given worksheet, titled according to the name of the field. Individual row and column headings will be drawn from the MATLAB table containing the data to export. Additional labels spanning the entire set of columns and rows can optionally be specified. rawData should be organized as follows (where square brackets denote optional fields):
+```
 >   rawData.paperSection.figureName.tables(1:n).table = _MATLAB table of data_
 >   [rawData.paperSection.figureName.tables(1:n).colLabelHorizontal = _char label for columns of table_]
 >   [rawData.paperSection.figureName.tables(1:n).rowLabelVertical = _char label for rows of table_]
-
+```
 # Installation:
 Copy the entire file hierarchy to the installation path of choice and add it to your MATLAB path. Call:
 
